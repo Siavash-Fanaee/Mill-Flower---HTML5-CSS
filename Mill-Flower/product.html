@@ -1,0 +1,109 @@
+<!DOCTYPE html>     <!-- html 5 declaration:-->
+<html lang="en">    <!--Declare the language of the Web page-->
+<head>
+    <meta charset="UTF-8">      <!-- To show the browser use UTF-8 character set: -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Setting page to viewport for responsivness: -->
+    <link rel="stylesheet" href="css\styles.css">  <!-- Link to css file-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!--Link to cloudflare for using ICONs-->
+    <title>Product</title>  <!--Set title-->
+</head>
+<body>
+
+    <header>  
+        <nav class="headNav"> <!--Using nav tag to defines a set of navigation links-->
+            <a href="#" class="WhiteLink">My Account</a>
+            <a href="#" class="WhiteLink">Basket</a>
+            <a href="checkout.html" class="WhiteLink" target="_blank">Checkout</a> <!--Link to checkout page (open in new window) -->
+        </nav>
+
+        
+        <img class="mill-image" src="images\logo3.png" alt="Mill Flowers logo"> <!--using img tag to show the logo. define class to access from ccs file--> 
+
+        <nav class="ContactNav">
+            <i class="fa fa-mobile"></i>    <!-- cloudflare MOBILE icon -->
+            <a href="tel:+353614486165" class="CntactLink">+353 (0)61 4486165</a> <!-- Create a call link using tel -->
+            <i class="fa fa-at"></i>    <!-- cloudflare @ icon -->
+            <a href="mailto:info@millflowers.ie" class="CntactLink">info@millflowers.ie</a> <!-- Create a mail link using mailto -->
+        </nav>
+
+        
+        <h5 class="ARTISAN">ARTISAN FLOWER ARRANGMENTS YOU WILL LOVE</h5>
+        
+        <h3>
+            <nav class="MainNav1"> <!--Using nav tag to defines a set of navigation links-->
+                <a href="#" class="MainLink1">HOME</a>
+                <a href="#" class="MainLink1">ABOUT US</a>
+                <a href="#" class="MainLink1">BUY ONLINE</a>
+                <a href="#" class="MainLink1">WEDDINGS</a>
+                <a href="#" class="MainLink1">CONTACT US</a>
+            </nav>
+        </h3>
+
+    </header>   <!-- End of header -->
+
+    <main>  <!-- main content of the page are put in main tag -->
+
+        <figure class="float">  <!-- puting main image of the page as a self-contained (a unit of content) -->
+            <img id="lilyflower" src="images\lily500.png" alt="Lily flower">
+        </figure>
+
+        <section id="RightSection"> <!-- Putting a set of elements in a section tag with an special id for using in css -->
+            <h1 class="greenTitre">Vibrant Lily Basket</h1>
+            <h4>Vibrant orange asiatic lilies in awicker basket</h4>
+            <p>These flowers are natueally complimented by deep green shades of oregonia and 
+                nestled in areusable rustic wicker basket - Sure to add an inviting touch to any space!
+            </p>
+            <p>Price:&#128 49.99</p>
+            <hr>    <!-- <hr> tag to insert a horizontal rule -->
+            <h3>Choose delivery or pickup</h3>
+
+            <label for="Order">Order Type</label>
+            <select name="Order" id="Order">    <!-- select tag to create a drop-down list with two options -->
+              <option value="delivery">Delivery</option>    <!-- first Value of the list-->
+              <option value="pickup">Pickup</option>        <!-- second Value of the list-->
+            </select>
+            <br>
+            <a href="checkout.html" target="_blank">    <!--Link for submit button-->
+                <input class="submit" type="submit" value="Order Now">  <!--input tag of the type submit-->
+            </a>
+   
+        </section>
+
+
+        <h2 id="alsoLike" class="greenTitre">You may also like</h2>
+
+        <section class=flex-container1> <!-- Putting another set of elements in the second section with a class for using in css -->
+
+            <!-- figures, figcaptions and images -->
+            <figure class="FlowerPics">
+                <figcaption>White bouquet</figcaption>
+                <img src="images\white400_square.png" alt="White bouquet" class ="imgF">
+            </figure>
+
+            <figure class="FlowerPics">
+                <figcaption>Orange bouquet</figcaption>
+                <img src="images\gift.png" alt="Orange bouquet" class ="imgF">
+            </figure>
+
+            <figure class="FlowerPics">
+                <figcaption>Tulip bouquet</figcaption>
+                <img src="images\tulips_square.png" alt="Tulip bouquet" class ="imgF">
+            </figure>
+
+            <figure class="FlowerPics">
+                <figcaption>Small bouquet</figcaption>
+                <img src="images\wedding_Square.jpg" alt="Small bouquet" class ="imgF">
+            </figure>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <i class="fa fa-twitter"></i>   <!-- cloudflare twitter icon -->
+        <a href="https://twitter.com/millflowers?lang=en5">&#64millflowers</a>  <!--Link to twitter (&#64 = at sign in UTF-8)-->
+    </footer>
+
+</body>
+</html>

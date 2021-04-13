@@ -1,0 +1,206 @@
+/*Some general CSS properties for whole pages*/
+body {
+    font-family: "Helvetica Neue", Helvetica , "sans serif";
+    font-size: 1em; /*em is a relative measurment vs px that is static and absolute*/
+    color: #7A7C7D;
+    max-width: 1000px; height: auto; /*1000px is used as asked in the assiginment. could also use % */
+    margin: auto;
+}
+
+/*Applying flexbox for headNav class*/
+.headNav {
+    display: flex;
+    justify-content: flex-end;  /*Justify elements to the end of flex container*/
+    background-color: #A0C33F;
+    padding: 1em;
+    text-align: right;
+}
+
+/*Some general CSS features for class MainLink1 and MainLink2*/
+a.MainLink1 , a.MainLink2 {
+    color: #A0C33F;
+    padding-right: 1.4em;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/*Applying flexbox for MainNav1 class in product page*/
+.MainNav1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*Applying different hover, visited and active states on links*/
+.MainLink1:visited {
+    font-style: italic;
+}
+.MainLink1:hover {
+    color: #57c7ff;
+}
+.MainLink1:active {
+    font-weight: bold;
+}
+
+.MainLink2:hover {
+    font-weight: bold;
+}
+.MainLink2:active {
+    font-style: italic;
+}
+.MainLink2:visited {
+    font-style: italic;
+}
+.WhiteLink:hover {
+    font-family: monospace;
+    font-weight: bold;
+    color: #fffb00;
+    font-size: 120%;
+}
+.WhiteLink:active {
+    font-style: italic;
+}
+
+/*Set maximum width for logo image. If the content is larger than the 
+maximum width, it will automatically change the height of the element*/
+.mill-image {
+    max-width: 100%; height: auto;
+}
+
+.ARTISAN {
+    font-style: italic;
+}
+
+.WhiteLink {
+    color: rgba(255, 255, 255, 0.876);
+    padding-left: 20px;
+    text-decoration: none;  /* to remove defult underline*/
+
+}
+a.CntactLink {
+    color: #7A7C7D;
+    text-decoration: none;  /* to remove defult underline*/
+    font-weight: normal;
+}
+.ContactNav {
+    float: right; /*The element floats to the right of its container*/
+}
+
+i.fa-mobile, i.fa-at, i.fa-twitter { /*Icons properties*/
+    color: #A0C33F;
+    font-size: 20px;
+}
+
+.greenTitre {
+    color: #A0C33F;
+    font-family: Georgia, serif;
+    font-size: 1.5em;   /* em relative measurment for font size*/
+    font-weight: bold;
+}
+
+.LegendTitre {
+    color: #A0C33F;
+    font-family: Georgia, serif;
+    font-size: 1.2em;   /* em relative measurment for font size*/
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1.5px solid #A0C33F;    /*shorthand fpr border width, style and color*/
+}
+
+/*Applying some properties on submit button*/
+.submit {
+    border-style: none;
+    font-size: 1em;
+    background-color: #A0C33F;
+    padding: 1.5% 3%;
+    color: white;
+    margin: 1em 0em;    /*Shorthand margin (top & bottom) (right & left)*/
+    float: right;   /*The element floats to the right of its container*/
+}
+
+form {
+    margin-top: 1em;    /*The top margin as a space between 2 forms of the checkout page*/
+}
+
+.float {
+    float:none;    /*floating the image to the left side*/
+}
+
+#lilyflower {
+    width: 90%;    /*set the size of the image based on % for responsiveness*/
+}
+
+#alsoLike {
+    clear: left;    /*To end the previus left float*/
+}
+
+#RightSection {
+    padding: 2em;
+    float: right;
+}
+
+.imgF {
+    width: 14em; /*em relative measurment for width*/
+    height: 15em; /*em relative measurment for width*/
+}
+
+/*Some general CSS properties for class FlowerPics*/
+.FlowerPics {
+    border: 3px solid #A0C33F;  /*Shorthand border element*/
+    padding: 1.1% 0.5%;
+    margin: 0.5% 0.5%;
+    font-family: Georgia, serif;
+}
+
+
+/*Set a container for 4 flower pics and captions and make it flex*/
+.flex-container1 {
+    display: flex;
+    flex-flow:row wrap; /* shorthand for direction & wrap - wrap will transfer items to the next line when display size reduced */
+    justify-content:space-around;
+}
+
+/*Some similar CSS properties for 2 different classes*/
+figcaption, #CreditCard {
+    font-family: Georgia, serif;
+    text-align: left;
+    color: #7A7C7D;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+/*set appropriate dimensions for the text areas of the project*/
+textarea {
+    width: 25em;
+    height: 5em;
+    border: 1.5px solid #A0C33F;
+}
+
+.input {
+    width: 15em;    /*Set width for input calss elements*/
+}
+
+/*Set border for special inputs only (text)*/
+input[type=text] {
+    border: 1.5px solid #A0C33F;
+}
+
+footer {
+    clear: right;   /*To end the previus elemets right float*/
+    text-align: right;
+}
+
+/*put two main parts of the checkout page in grid*/
+.GridContain {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /*Create 2 columns, second is 3 times wider than first*/ 
+    grid-row-gap: 5px;
+}
+
+/*Using media query to change layout at the treshold 800px*/
+@media screen and (min-width: 800px) { 
+    .float {float: left;}
+    #RightSection {float: none} /* The whole section goes to next line when the display size is less than 800 px (Applicable for tablets and smart phones)*/
+
+}

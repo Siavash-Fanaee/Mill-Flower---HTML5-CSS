@@ -1,0 +1,140 @@
+<!DOCTYPE html>     <!-- html 5 declaration:-->
+<html lang="en">    <!--Declare the language of the Web page-->
+<head>
+    <meta charset="UTF-8">      <!-- Ti show the browser use UTF-8 character set: -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- Setting page to viewport for responsivness: -->
+    <link rel="stylesheet" href="css\styles.css">  <!-- Link to css file-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!--Link to cloudflare for using ICONs-->
+    <title>checkout</title>  <!--Set title-->
+</head>
+
+<header>    <!-- Put links and logo and some other components in header-->
+
+    <nav class="headNav">   <!--Using nav tag to defines a set of navigation links-->
+        <a href="#" class="WhiteLink">My Account</a>
+        <a href="#" class="WhiteLink">Basket</a>
+        <a href="#" class="WhiteLink">Checkout</a>
+    </nav>
+    
+
+    <img class="mill-image" src="images\logo3.png" alt="Mill Flowers logo">   <!--using img tag to show the logo. define class to access from ccs file--> 
+
+    <nav class="ContactNav">
+        <i class="fa fa-mobile"></i>    <!-- cloudflare MOBILE icon -->
+        <a href="tel:+353614486165" class="CntactLink">+353 (0)61 4486165</a> <!-- Create a call link using tel -->
+        <i class="fa fa-at"></i>    <!-- cloudflare @ icon -->
+        <a href="mailto:info@millflowers.ie" class="CntactLink">info@millflowers.ie</a> <!-- Create a mail link using mailto -->
+    </nav>
+
+    <h5 class="ARTISAN">ARTISAN FLOWER ARRANGMENTS YOU WILL LOVE</h5>
+    
+    <h3>
+        <nav> <!--Using nav tag to defines a set of navigation links-->
+            <a href="#" class="MainLink2">HOME</a>
+            <a href="#" class="MainLink2">ABOUT US</a>
+            <a href="product.html"  class="MainLink2" target="_blank">BUY ONLINE</a>    <!--Link to product page (open in new window) -->
+            <a href="#" class="MainLink2">WEDDINGS</a>
+            <a href="#" class="MainLink2">CONTACT US</a>
+        </nav>
+    </h3>
+
+</header> <!-- End of header -->
+<body>
+    <main>  <!-- main content of the page -->
+        <h1 class="greenTitre">Checkout</h1>
+        <form>  <!-- using form tag for a set of inputs. it enables developer to put an acteion to yhis set-->
+            <fieldset>  <!-- fieldset tag to group related elements in the form -->
+                <legend class="LegendTitre">Delivery Information</legend>   <!--legend tag to define a caption for the fieldset-->
+                <div class="GridContain">   <!--div for css grid-->
+                    <!--Labels, inputs and textareas -->
+                    <label for="Ddate" >Delivery date</label>
+                    <input class="input" type="date" id="Ddate" name ="Ddate">
+                    <label for="Special" >Special Delivery Instructions</label>
+                    <textarea name="Special" ></textarea>
+                    <label for="Fname">Recipient Firstname </label>
+                    <input  class="input" type="text" id="Fname" name ="Fname">
+                    <label  for="Sname">Recipient Surname</label>
+                    <input  class="input" type="text" id="Sname" name ="Sname">
+                    <label  for="Add1">Address 1</label>
+                    <input  class="input" type="text" id="Add1" name ="Add1">
+                    <label  for="Add2">Address 2</label>
+                    <input  class="input" type="text" id="Add2" name ="Add2">
+                    <label  for="Town">Town/City</label>
+                    <input  class="input" type="text" id="Town" name ="Town">
+                    <label  for="County">County</label>
+                    <input  class="input" type="text" id="County" name ="County">
+                    <label  for="Eircode">Eircode</label>
+                    <input  class="input" type="text" id="Eircode" name ="Eircode">
+                    <label  for="CardMSG">Card Message</label>
+                    <textarea  name="CardMSG">For example: Happy Birthday, Have a fabulous day Kevin</textarea>
+                </div>
+            </fieldset>
+        </form>
+
+        <form>  <!-- using form tag for a set of inputs. it enables developer to put an acteion to yhis set-->
+            <fieldset>  <!-- fieldset tag to group related elements in the form -->
+                <legend class="LegendTitre">Payment Information</legend>    <!--legend tag to define a caption for the fieldset-->
+                <h3 id="CreditCard">Credit Card</h3>
+
+                <div class="GridContain">   <!--div for css grid-->                  
+                    <label for="NameOnCard">Name on card</label>
+                    <input class="input" type="text" id="NameOnCard" name ="NameOnCard">
+                    
+                    <label for="NameOnCard">Credit Card Type</label>
+                    <div>   <!--div for putting radio elements in one cell of grid-->
+                        <input type="radio" id="visa" name="CardType" value="visa">
+                        <label for="male">Visa</label>
+                        <input type="radio" id="master" name="CardType" value="mastercard">
+                        <label for="male">Mastercard</label>
+                    </div>
+
+                    <label for="CardNumber">Card Number</label>
+                    <input class="input" type="text" id="CardNumber" name ="CardNumber">
+                    
+                    <label for="Expiry">Expiry</label>
+                    <div>   <!--div for putting drop-down elements in one cell of grid-->
+                        <select name="ExpMonth" id="Expiry">
+                            <option value="01-Jan">01-Jan</option>
+                            <option value="01-April">01-March</option>
+                            <option value="01-July">01-July</option>
+                            <option value="01-October">01-October</option>
+                        </select>
+                        <select name="ExpYear" id="Expiry">
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+
+                    
+                    <label for="cvn">Card verification number</label>
+                    <input class="input" type="text" id="cvn" name ="cvn">
+                    
+                    <label for="mail">Email</label>
+                    <input class="input" type="text" id="mail" name ="mail">
+                    
+                    <label for="phone">Phone</label>
+                    <input class="input" type="text" id="phone" name ="phone">
+                    
+    
+                </div>
+    
+            </fieldset>
+        </form>
+        
+        <a href="/php/checkout.php">    <!--Link for submit button-->
+            <input class="submit" type="submit" value="Place Order">    <!--input tag of the type submit-->
+        </a>
+
+    </main>
+
+    <footer>
+        <i class="fa fa-twitter"></i>   <!-- cloudflare twitter icon -->
+        <a href="https://twitter.com/millflowers?lang=en5">&#64millflowers</a>  <!--Link to twitter (&#64 = at sign in UTF-8)-->
+    </footer>
+    
+</body>
+</html>
